@@ -1,10 +1,8 @@
 package org.example;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,14 +26,11 @@ public class Main {
             e.printStackTrace();
         }
 
-        //LOAD
-//        Set<User> users = new HashSet<>();
         Set<User> users = loadUsersFromFile(filePath);
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println(UUID.randomUUID());
-        System.out.println("https://vk.com/z10bin");
+        System.out.println("Для удобства тестирования: " + UUID.randomUUID());
 
         while (true) {
             System.out.println("Введите GUID или короткую ссылку. Для выхода exit:");
@@ -90,7 +85,7 @@ public class Main {
                 String userManual = """
                         Для добавления новой ссылки введите URL и лимит переходов через пробел.
                         Для изменения лимита введите короткую ссылку и лимит переходов через пробел.
-                        Для удаления ссылки введите её.
+                        Для удаления ссылки введите её саму.
                         Для выхода из режима редактирования нажмите Enter.""";
                 System.out.println(userManual);
                 input = in.nextLine();

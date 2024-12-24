@@ -111,9 +111,4 @@ public class Link {
         this.limit = limit;
     }
 
-
-
-//    public void resetClicksCount() {
-//        clicksCount = 1;
-//    }
 }
